@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UID-VD-46G" customClass="YHWaterRippleBtn">
+                                <rect key="frame" x="62.5" y="96" width="195" height="64"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.59607843140000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="r9K-Nq-ddA"/>
+                                </constraints>
+                                <state key="normal" title="YHWaterRippleBtnTypeInner">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9XZ-Gv-vMY" customClass="YHWaterRippleBtn">
+                                <rect key="frame" x="60.5" y="205" width="199" height="64"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.59607843140000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="YHWaterRippleBtnTypeOuter">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xN-sE-UZy" customClass="YHWaterRippleBtn">
+                                <rect key="frame" x="39.5" y="309" width="241" height="64"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.59607843140000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="YHWaterRippleBtnTypeInnerCenter">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1070407107" green="0.16125383970000001" blue="0.30235522990000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9xN-sE-UZy" firstAttribute="centerX" secondItem="9XZ-Gv-vMY" secondAttribute="centerX" id="2ha-Nb-O4B"/>
+                            <constraint firstItem="9XZ-Gv-vMY" firstAttribute="height" secondItem="UID-VD-46G" secondAttribute="height" id="FBP-Zc-5yk"/>
+                            <constraint firstItem="UID-VD-46G" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="76" id="HyD-fv-ecM"/>
+                            <constraint firstItem="9xN-sE-UZy" firstAttribute="height" secondItem="9XZ-Gv-vMY" secondAttribute="height" id="OFu-rj-DYO"/>
+                            <constraint firstItem="9xN-sE-UZy" firstAttribute="top" secondItem="9XZ-Gv-vMY" secondAttribute="bottom" constant="40" id="UzX-cm-iWk"/>
+                            <constraint firstItem="9XZ-Gv-vMY" firstAttribute="centerX" secondItem="UID-VD-46G" secondAttribute="centerX" id="eZc-B0-v7n"/>
+                            <constraint firstItem="9XZ-Gv-vMY" firstAttribute="top" secondItem="UID-VD-46G" secondAttribute="bottom" constant="45" id="hcZ-gr-Vi8"/>
+                            <constraint firstItem="UID-VD-46G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sOQ-eV-qwy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="innerBtn" destination="UID-VD-46G" id="Qdw-iS-RFP"/>
+                        <outlet property="innerCenterBtn" destination="9xN-sE-UZy" id="bO9-uL-m44"/>
+                        <outlet property="outerBtn" destination="9XZ-Gv-vMY" id="rLu-sL-N0O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>
