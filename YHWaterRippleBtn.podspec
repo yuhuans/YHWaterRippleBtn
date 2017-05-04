@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author             = { "yuhuanwater" => "260647768@qq.com" }
   s.platform     = :ios, "8.0"
-  s.source       = { :git => "https://github.com/yuhuans/YHWaterRippleBtn", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/yuhuans/YHWaterRippleBtn.git", :tag => "#{s.version}" }
   s.source_files  =  "YHWaterRipple/YHWaterRipple/YHWaterRippleBtn/*.{h,m}"
 
 end
