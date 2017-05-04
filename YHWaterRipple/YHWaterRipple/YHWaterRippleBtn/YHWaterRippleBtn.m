@@ -7,6 +7,7 @@
 //
 
 #import "YHWaterRippleBtn.h"
+#import <objc/runtime.h>
 #define SuppressPerformSelectorLeakWarning(Stuff) \
 do { \
     _Pragma("clang diagnostic push") \
@@ -44,23 +45,6 @@ const CGFloat YHFlashInnerCircleInitialRaius = 5;
 -(void)addTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents{
     self.s_actionSEL=action;
     self.target=target;
-}
-- (void)setRippleType:(YHWaterRippleBtnType)rippleType
-{
-    switch (rippleType) {
-        case YHWaterRippleBtnTypeInnerCenter:
-            self.clipsToBounds = NO;
-            break;
-        case YHWaterRippleBtnTypeOuter:
-            self.clipsToBounds = NO;
-            break;
-        case YHWaterRippleBtnTypeInner:
-            self.clipsToBounds = YES;
-            break;
-        default:
-            break;
-    }
-    _rippleType = rippleType;
 }
 #pragma mark -
 #pragma mark - Private
@@ -180,6 +164,25 @@ const CGFloat YHFlashInnerCircleInitialRaius = 5;
 }
 -(void)dealloc{
     self.target=nil;
+}
+#pragma mark -
+#pragma mark - Setter
+- (void)setRippleType:(YHWaterRippleBtnType)rippleType
+{
+    switch (rippleType) {
+        case YHWaterRippleBtnTypeInnerCenter:
+            self.clipsToBounds = NO;
+            break;
+        case YHWaterRippleBtnTypeOuter:
+            self.clipsToBounds = NO;
+            break;
+        case YHWaterRippleBtnTypeInner:
+            self.clipsToBounds = YES;
+            break;
+        default:
+            break;
+    }
+    _rippleType = rippleType;
 }
 #pragma mark -
 #pragma mark - CAAnimationDelegate
