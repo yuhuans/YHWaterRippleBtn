@@ -5,7 +5,7 @@
 
 ## 使用说明
 
-拖动文件YHWaterRippleBtn.h/YHWaterRippleBtn.m到您的项目
+拖动文件YHWaterRippleBtn.h/YHWaterRippleBtn.m到您的项目，或者pod 'YHWaterRippleBtn'
 
 ```
 YHWaterRippleBtn *btn=[[YHWaterRippleBtn alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
